@@ -7,7 +7,7 @@
 ## 2. Contexto e Problema
 O mercado brasileiro de veículos elétricos cresceu 89% entre 2023 e 2024. Esse volume gera uma pressão sobre condomínios e edifícios corporativos que precisam gerir a infraestrutura de recarga de forma justa. O **EV ChargeOps** surge para resolver a opacidade dos modelos de rateio tradicionais, implementando uma camada de gestão que captura dados reais de consumo via API GoodWe e protocolo OCPP, organizando a cobrança por kWh individualizado.
 
-## 3. Arquitetura da Solução (Orquestração)
+## 3. Arquitetura da Solução
 A plataforma é estruturada em quatro camadas fundamentais:
 
 *   **Camada Física (Hardware):** Carregador **GoodWe HCA G2** com autenticação RFID e sensores de efeito Hall para medição precisa de energia.
