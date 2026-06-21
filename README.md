@@ -18,7 +18,7 @@ A plataforma é estruturada em quatro camadas fundamentais:
 ## 4. Modelo de Rateio Dinâmico
 Diferente do rateio fixo, nossa proposta utiliza uma **Matriz de Custos** baseada na origem do fluxo de energia:
 *   **Equação Base:** $F_{i} = (E_{solar,i} \times C_{solar}) + (E_{rede,i} \times C_{rede}) + (E_{bateria,i} \times C_{bateria}) + T_{infra}$.
-*   O sistema socializa custos em horários de pico através de uma tarifa média ponderada, garantindo justiça financeira mesmo em casos de flutuação de carga da bateria].
+*   O sistema socializa custos em horários de pico através de uma tarifa média ponderada, garantindo justiça financeira mesmo em casos de flutuação de carga da bateria.
 
 ## 5. Implementações de Inteligência Artificial
 Para otimizar a gestão, o sistema conta com três frentes de IA:
@@ -28,7 +28,7 @@ Para otimizar a gestão, o sistema conta com três frentes de IA:
 
 ## 6. Tratamento de Exceções
 *   **Queda de Conexão:** O acumulador de hardware do carregador mantém os dados locais; o sistema recupera o consumo via cálculo de delta matemático assim que o sinal retorna.
-*   **Múltiplos Veículos:** A segregação lógica entre `usuarios` e `rfids` no banco de dados permite que cada morador seja cobrado individualmente, mesmo compartilhando a mesma vaga].
+*   **Múltiplos Veículos:** A segregação lógica entre `usuarios` e `rfids` no banco de dados permite que cada morador seja cobrado individualmente, mesmo compartilhando a mesma vaga.
 
 ## 7. Implementação e Prototipação Técnica
 
@@ -53,3 +53,4 @@ Aplicação de IA: O uso de técnicas específicas (RAG e Isolation Forests) par
 
 ---
 **Fontes Consultadas:** ABVE, ANEEL (RN 1.000/2021), GoodWe SEMS Portal API, IBGE.
+**Utilização de IA:** Centralização de pesquisas e dados no NotebookLM para criação de relatório e diagrama oficial.
