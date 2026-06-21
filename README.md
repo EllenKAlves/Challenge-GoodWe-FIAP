@@ -53,4 +53,5 @@ Aplicação de IA: O uso de técnicas específicas (RAG e Isolation Forests) par
 
 ---
 **Fontes Consultadas:** ABVE, ANEEL (RN 1.000/2021), GoodWe SEMS Portal API, IBGE.
+
 **Utilização de IA:** Centralização de pesquisas e dados no NotebookLM para criação de relatório e diagrama oficial.
