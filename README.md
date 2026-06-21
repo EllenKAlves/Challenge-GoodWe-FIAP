@@ -31,10 +31,17 @@ Para otimizar a gestão, o sistema conta com três frentes de IA:
 *   **Múltiplos Veículos:** A segregação lógica entre `usuarios` e `rfids` no banco de dados permite que cada morador seja cobrado individualmente, mesmo compartilhando a mesma vaga].
 
 ## 7. Implementação e Prototipação Técnica
-A implementação do **EV ChargeOps** segue uma estratégia de **Gêmeo Digital**, utilizando **Python (Pandas)** para simular payloads JSON da API SEMS e validar o motor de regras antes da integração física . O **middleware** será construído para realizar a ingestão de dados via *polling* agendado, tratando a persistência em um banco **PostgreSQL** que segrega logicamente `usuários` e `tags RFID` para viabilizar o faturamento em vagas compartilhadas [4-6]. Para garantir a resiliência, o protótipo inclui lógica de **Cálculo de Delta Matemático**, recuperando o consumo acumulado no hardware após períodos de instabilidade de rede. As frentes de **IA** serão prototipadas utilizando arquiteturas **RAG (NLP)** para o "Síndico Virtual" e modelos de **Isolation Forests** para a detecção de anomalias elétricas, assegurando que a transição do carregador residencial para o modelo coletivo ocorra com total segurança operacional e transparência financeira .
-Este parágrafo resume os seguintes pontos-chave encontrados nas fontes:
-Prototipagem com Python: Uso de scripts para simular o comportamento da API e validar dados
-.
+
+A implementação do **EV ChargeOps** segue uma estratégia de **Gêmeo Digital**, utilizando **Python (Pandas)** para simular payloads JSON da API SEMS e validar o motor de regras antes da integração física. 
+O **middleware** será construído para realizar a ingestão de dados via *polling* agendado, tratando a persistência em um banco **PostgreSQL** que segrega logicamente `usuários` e `tags RFID` para viabilizar o faturamento em vagas compartilhadas. 
+
+Para garantir a resiliência, o protótipo inclui lógica de **Cálculo de Delta Matemático**, recuperando o consumo acumulado no hardware após períodos de instabilidade de rede. As frentes de **IA** serão prototipadas utilizando arquiteturas **RAG (NLP)** para o **"Síndico Virtual"** e modelos de **Isolation Forests** para a detecção de anomalias elétricas, assegurando que a transição do carregador residencial para o modelo coletivo ocorra com total segurança operacional e transparência financeira.
+
+**Pontos-chave da prototipagem:**
+*   **Simulação com Python:** Uso de scripts para mimetizar o comportamento da API e validar a integridade dos dados antes do deploy.
+*   **Segregação de Entidades:** Separação entre moradores e cartões RFID no banco de dados para gerir o uso múltiplo de uma mesma infraestrutura.
+*   **Resiliência de Dados:** Tratamento analítico para evitar perda de faturamento durante quedas de conexão.
+  
 Arquitetura de Banco de Dados: A importância de separar RFIDs de usuários para tratar o cenário de múltiplos veículos
 .
 Resiliência (Delta): Como o sistema lida com quedas de conexão recuperando dados do hardware
